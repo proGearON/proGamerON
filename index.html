@@ -15,7 +15,10 @@
             <source src="sword_-_99299 (720p).mp4" type="Video/mp4">
         </video>
 
-        <h5 class="coding" onclick="audio.play();">Created By Aryan's <br>coding</h5>
+        <div class="coding">
+            <h5 onclick="audio.play();">Created By Aryan's <br>coding</h5>
+        </div>
+        
         <div class="navbar" onclick="audio.play();">
             <img src="Untitled.png" class="logo" onclick="audio.play();">
             <ul>
@@ -94,7 +97,7 @@
             cursor: pointer;
             position: relative;
             width: 1000px;
-            height: 100px;
+            height: 300px;
             background-color: #000;
             align-items: center;
             color: white;
@@ -118,33 +121,33 @@
         }
 
         .navbar ul li a {
-        text-shadow: 3px 3px 2px #cfbdbd;
-        font-size: 24px;
-        display: inline-block;
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: bolder;
-    }
+            text-shadow: 3px 3px 2px #cfbdbd;
+            font-size: 24px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
 
-    .coding {
-        position: relative;
-        left: 467px;
-        top: 12px;
-        width: 173px;
-        color: #fbff00;
-        text-align: center;
-        position: relative;
-        top: 10px;
+        .coding {
+            position: relative;
+            left: 467px;
+            top: 12px;
+            width: 173px;
+            color: #fbff00;
+            text-align: center;
+            position: relative;
+            top: 10px;
 
-    }
+        }
 
-    .content p {
-        text-shadow: 3px 3px 3px #cfbdbd;
-        margin: 20px auto;
-        font-weight: bolder;
-        line-height: 25px;
-    }
+        .content p {
+            text-shadow: 3px 3px 3px #cfbdbd;
+            margin: 20px auto;
+            font-weight: bolder;
+            line-height: 25px;
+        }
     }
 
     .navbar {
@@ -179,7 +182,7 @@
     }
 
     .navbar ul li::after {
-        border-radius: 100px;
+        border-radius: 300px;
         content: '';
         height: 5px;
         width: 0;
@@ -302,7 +305,11 @@
         text-align: center;
         position: relative;
         top: 10px;
-
+        padding: 0 300px 0 300px;
+        display: flex;
+        justify-content: center;
+        left: 20%;
+        
     }
 
 
