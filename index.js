@@ -23,7 +23,7 @@ else {
 function notify() {
      const notification = new Notification("Notifications of Website is come stay join to our website for new updates", {
           body: 'New version of website coming v2.0',
-          icon: './logo.png',
+          icon: './5.jpg',
           vibrate: [300, 100, 200],
           ring: './Notification.mp3',
      });
