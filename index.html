@@ -3,13 +3,15 @@
 
 <head>
     <title>proGearON</title>
-    <link rel="shortcut icon" type="x-icon" href="5.jpg">
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <script src="index.js"></script>
 </head>
 
 
 <body onclick="audio.play();">
 
     <div class="banner" onclick="audio.play();">
+        
 
         <video autoplay loop muted>
             <source src="sword_-_99299 (720p).mp4" type="Video/mp4">
@@ -18,21 +20,23 @@
         <div class="coding">
             <h5 onclick="audio.play();">Created By Aryan's <br>coding</h5>
         </div>
-        
+
         <div class="navbar" onclick="audio.play();">
             <img src="Untitled.png" class="logo" onclick="audio.play();">
             <ul>
                 <li><a href='index.html' onclick="audio.play();">Home</a></li>
-                <li><a href='videos.html' onclick="audio.play();">Video</a></li>
+                <li><a href='ok.html' onclick="audio.play();">Video</a></li>
                 <li><a href="https://youtube.com/@proGearON?si=doW5E-esXDdhMQta" onclick="audio.play();">Subscribe</a>
                 </li>
+                <li><a href="Mods.html">Mods</a></li>
                 <li><a href='for user.html' onclick="audio.play();">for Owner</a></li>
 
             </ul>
+            <div class="update"><span>Website Update to <br>1 Jan 2024</span></div>
         </div>
     </div>
     <div class="content" onclick="audio.play();">
-        <h1>Welcome to proGearON</h1>
+        <h1>Welcome to proGearON Elite</h1>
         <p>Hi Subscribe to MY Youtube Channel</p>
         <div>
             <div>
@@ -44,29 +48,37 @@
                 </a>
             </div>
 
-            <div class="version" onclick="audio.play();">
-                <h5>Verion 1.22</h5>
-            </div>
 
 
         </div>
 
         <div class="supported-by" onclick="audio.play();">
-            <h6 style="color: #eeff00;">Supported By proGearON</h6>
+            <h6 style="color: var(--secondery-color); ">Supported By proGearON Elite</h6>
         </div>
-        <div class="bc" onclick="audio.play();">
-            <a class='Change' href='/index1' style='text-decoration: none;  color: white; '>
+        <div class="background">
+            <a href="#" id="ok" class="a">
                 <h5>Change Background</h5>
             </a>
         </div>
+    </div>
+
+    <div class="logo-circul">
+        <img src="5.jpg" width="50">
+    </div>
+    <div class="version" onclick="audio.play();">
+        <h5>Verion 2.0</h5>
     </div>
 
     </div>
     <script type="text/javascript">
         const audio = new Audio();
         audio.src = "./click.mp3";
+
+        var ok = document.getElementById("ok");
+        ok.onclick = function() {
+            document.body.classList.toggle("dark-theam");
+        }
     </script>
-    <script src="index.js"></script>
 </body>
 
 <style>
@@ -80,13 +92,27 @@
         margin: 0;
         padding: 0;
         font-family: sans-serif;
+    }.navbar .update {
+        border-radius: 6px;
+        color: var(--primary-color);
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px;
     }
 
     @media only screen and (max-width: 1100px) {
         body {
             background-color: #40c9ff;
-            background: url(img101.png);
+            background: url(Picsart_24-12-14_19-29-27-631.jpg) ;
             min-height: 2040vh;
+            object-fit: cover; 
+            height: 2400px;
+            background-position: center;
+            
 
         }
 
@@ -101,7 +127,7 @@
             height: 300px;
             background-color: #000;
             align-items: center;
-            color: white;
+            color: var(--primary-color);
             flex-direction: column;
             justify-content: center;
             border: none;
@@ -126,7 +152,7 @@
             font-size: 24px;
             display: inline-block;
             text-decoration: none;
-            color: #fff;
+            color: var(--primary-color);
             text-transform: uppercase;
             font-weight: bolder;
         }
@@ -149,6 +175,27 @@
             font-weight: bolder;
             line-height: 25px;
         }
+    }
+    
+    :root {
+        --primary-color: #fff;
+        --visibility: visible;
+        --secondery-color: #eeff00;
+        --background: #fff;
+    }
+    .dark-theam {
+        --background: url(Picsart_24-12-14_19-29-27-631.jpg);
+        --primary-color: #000;
+        --visibility: hidden;
+        --secondery-color: #48ff00;
+    }
+
+    .background {
+        margin: 10px;
+    }
+    .a {
+        text-decoration: none;
+        color: var(--primary-color);
     }
 
     .navbar {
@@ -178,7 +225,7 @@
         text-shadow: 3px 3px 2px #cfbdbd;
         display: inline-block;
         text-decoration: none;
-        color: #fff;
+        color: var(--primary-color);
         text-transform: uppercase;
     }
 
@@ -204,7 +251,7 @@
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
-        color: #fff;
+        color: var(--primary-color);
     }
 
     .content h1 {
@@ -232,7 +279,7 @@
         height: 40px;
         background-color: #000;
         align-items: center;
-        color: white;
+        color: #fff;
         flex-direction: column;
         justify-content: center;
         border: none;
@@ -282,6 +329,7 @@
 
 
     .banner video {
+        visibility: var(--visibility);
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -293,8 +341,13 @@
 
     .version {
         color: #ea00ff;
-        position: relative;
-        top: -1px;
+        position: absolute;
+        top: 95.5%;
+        border: 1px solid var(--primary-color);
+        padding: 6px 10px;
+        border-radius: 5px;
+        backdrop-filter: blur(1px);
+
     }
 
     .coding {
@@ -302,7 +355,7 @@
         left: 580px;
         top: 12px;
         width: 173px;
-        color: #fbff00;
+        color: var(--secondery-color);
         text-align: center;
         position: relative;
         top: 10px;
@@ -310,12 +363,11 @@
         display: flex;
         justify-content: center;
         left: 20%;
-        
+
     }
 
 
     .supported h6 {
-        color: #fff;
         align-items: flex-end;
     }
 
@@ -327,6 +379,18 @@
     .supported-by {
         position: relative;
         top: 3px;
+    }
+
+    .logo-circul {
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        bottom: 23px;
+        right: 23px;
+        border-radius: 60px;
+    }
+    .banner {
+        overflow: hidden;
     }
 </style>
 

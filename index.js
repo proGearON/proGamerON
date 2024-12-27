@@ -21,17 +21,28 @@ else {
 }
 
 function notify() {
-     const notification = new Notification("Notifications of Website is come stay join to our website for new updates", {
-          body: 'New version of website coming v2.0',
-          icon: './5.jpg',
+     const notification = new Notification("New version of Website is come, So check Out it ", {
+          body: 'Pages of website is updated and Website is Enterd in his version 2.0',
+          icon: './logo.png',
           vibrate: [300, 100, 200],
           ring: './Notification.mp3',
      });
+     const notification1 = new Notification("New video is come check Out is today", {
+          body: 'My First Minecraft Jar World Video on this Youtube',
+          icon: './0018.jpg',
+          vibrate: [300, 100, 200],
+          ring: './Notification.mp3',
+     });
+
+     
 
      notification.addEventListener('click', () => {
           window.open('index.html');
      });
 
+     notification1.addEventListener('click', () => {
+          window.open('ok.html');
+     });
 
      setTimeout(() => {
 
